@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export interface NavLink {
@@ -6,35 +5,45 @@ export interface NavLink {
   href: string;
 }
 
+export interface ChatMessage {
+  sender: 'user' | 'ai';
+  text: string;
+}
+
 export interface Pillar {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  engagement: string[];
-  impact: string;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
 }
 
 export interface Technology {
-  name: string;
-  description: string;
-  examples: string;
+    name:string;
+    description:string;
+    examples:string;
 }
 
 export interface TechnologyCategory {
-  category: string;
-  description: string;
-  technologies: Technology[];
+    category: string;
+    description: string;
+    technologies: Technology[];
 }
 
 export interface ImpactMetric {
-  icon: React.ReactNode;
-  title: string;
-  value: string;
+    title: string;
+    value: number;
+    icon: React.ReactNode;
 }
 
-export interface CallToActionItem {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  buttonText: string;
+export interface AudioParams {
+    baseFrequency: number;
+    subliminalFrequency: number;
+    duration: number;
+}
+
+export interface MemeticPacket {
+    shareText: string;
+    glyphDescription: string;
+    ritualSteps: string[];
+    blurb: string;
+    audioParams: AudioParams;
 }
